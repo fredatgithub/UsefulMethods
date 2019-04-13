@@ -25,9 +25,9 @@ namespace UsefulMethods
       List<int> result = new List<int>();
       for (int i = 2; i <= number; i++)
       {
-        if (FunctionsMath.IsPrime(number))
+        if (FunctionsMath.IsPrime(i))
         {
-          result.Add(number);
+          result.Add(i);
         }
       }
 
