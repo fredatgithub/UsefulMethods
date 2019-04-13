@@ -1,5 +1,4 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using UsefulMethods;
 using InternetFunc = UsefulMethods.FunctionsInternet;
 
 namespace UnitTestUsefulMethods
