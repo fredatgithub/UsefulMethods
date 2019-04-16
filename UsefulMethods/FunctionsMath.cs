@@ -27,6 +27,24 @@ namespace UsefulMethods
       return fact;
     }
 
+    public static int Factorial(int x)
+    {
+      if (x < 1 || x > int.MaxValue)
+      {
+        return 0;
+      }
+
+      int fact = 1;
+      int i = 1;
+      while (i <= x)
+      {
+        fact *= i;
+        i++;
+      }
+
+      return fact;
+    }
+
     public static BigInt Factorial(BigInt x)
     {
       if (x < 1)
@@ -195,7 +213,16 @@ namespace UsefulMethods
       return true;
     }
 
-    public static List<int> GetListOfPrime(int min, int count)
+    public static bool FastIsPrime(int candidate)
+    {
+      if (candidate == 4) return false;
+      var tmpDecalage = candidate >> 1;
+      var tmpFactorial = Factorial(candidate >> 1);
+      var tmpFactorialModulo = Factorial(candidate >> 1) % candidate;
+      return IsPrime(Factorial(candidate >> 1) % candidate);
+    }
+
+      public static List<int> GetListOfPrime(int min, int count)
     {
       var result = new List<int>();
       if (min >= count)

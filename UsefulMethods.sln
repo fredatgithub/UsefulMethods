@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsefulMethods", "UsefulMeth
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSUnitTestUsefulMethods", "UnitTestUsefullFunctions\MSUnitTestUsefulMethods.csproj", "{93931811-4989-4C55-8C8D-596A4158979C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppTestFastIsPrime", "ConsoleAppTestFastIsPrime\ConsoleAppTestFastIsPrime.csproj", "{F220B54A-65A4-4956-B9A7-DE12B5520E4D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{93931811-4989-4C55-8C8D-596A4158979C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{93931811-4989-4C55-8C8D-596A4158979C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{93931811-4989-4C55-8C8D-596A4158979C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F220B54A-65A4-4956-B9A7-DE12B5520E4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F220B54A-65A4-4956-B9A7-DE12B5520E4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F220B54A-65A4-4956-B9A7-DE12B5520E4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F220B54A-65A4-4956-B9A7-DE12B5520E4D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

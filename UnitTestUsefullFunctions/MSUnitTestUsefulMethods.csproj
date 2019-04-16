@@ -56,6 +56,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="UnitTestFunctionsFastPrimes.cs" />
     <Compile Include="UnitTestFunctionsTwinPrimes.cs" />
     <Compile Include="UnitTestFunctionsPrimes.cs" />
     <Compile Include="UnitTestCommonTypes.cs" />
