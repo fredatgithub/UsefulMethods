@@ -135,6 +135,78 @@ namespace UnitTestUsefullFunctions
 (809 , 811) 	(821 , 823) 	(827 , 829) 	(857 , 859) 	(881 , 883) 
      * */
 
+    [TestMethod]
+    public void TestMethod_GetTwinPrimeWith6NBefore_2()
+    {
+      const int source = 2;
+      List<int> expected = new List<int>() { 2 };
+      List<int> result = FunctionsPrimes.GetTwinPrimeWith6NBefore(source);
+      Assert.IsTrue(AssertListAreEqualed(result, expected));
+    }
+
+    [TestMethod]
+    public void TestMethod_GetTwinPrimeWith6NBefore_3()
+    {
+      const int source = 3;
+      List<int> expected = new List<int>() { 2 };
+      List<int> result = FunctionsPrimes.GetTwinPrimeWith6NBefore(source);
+      Assert.IsTrue(AssertListAreEqualed(result, expected));
+    }
+
+    [TestMethod]
+    public void TestMethod_GetTwinPrimeWith6NBefore_5()
+    {
+      const int source = 5;
+      List<int> expected = new List<int>() { 2, 5 };
+      List<int> result = FunctionsPrimes.GetTwinPrimeWith6NBefore(source);
+      Assert.IsTrue(AssertListAreEqualed(result, expected));
+    }
+
+    [TestMethod]
+    public void TestMethod_GetTwinPrimeWith6NBefore_11()
+    {
+      const int source = 11;
+      List<int> expected = new List<int>() { 2, 5, 11 };
+      List<int> result = FunctionsPrimes.GetTwinPrimeWith6NBefore(source);
+      Assert.IsTrue(AssertListAreEqualed(result, expected));
+    }
+
+    [TestMethod]
+    public void TestMethod_GetTwinPrimeWith6NBefore_13()
+    {
+      const int source = 13;
+      List<int> expected = new List<int>() { 2, 5, 11 };
+      List<int> result = FunctionsPrimes.GetTwinPrimeWith6NBefore(source);
+      Assert.IsTrue(AssertListAreEqualed(result, expected));
+    }
+
+    [TestMethod]
+    public void TestMethod_GetTwinPrimeWith6NBefore_19()
+    {
+      const int source = 19;
+      List<int> expected = new List<int>() { 2, 5, 11, 17 };
+      List<int> result = FunctionsPrimes.GetTwinPrimeWith6NBefore(source);
+      Assert.IsTrue(AssertListAreEqualed(result, expected));
+    }
+
+    [TestMethod]
+    public void TestMethod_GetTwinPrimeWith6NBefore_31()
+    {
+      const int source = 31;
+      List<int> expected = new List<int>() { 2, 5, 11, 17, 29 };
+      List<int> result = FunctionsPrimes.GetTwinPrimeWith6NBefore(source);
+      Assert.IsTrue(AssertListAreEqualed(result, expected));
+    }
+
+    [TestMethod]
+    public void TestMethod_GetTwinPrimeWith6NBefore_43()
+    {
+      const int source = 43;
+      List<int> expected = new List<int>() { 2, 5, 11, 17, 29, 41 };
+      List<int> result = FunctionsPrimes.GetTwinPrimeWith6NBefore(source);
+      Assert.IsTrue(AssertListAreEqualed(result, expected));
+    }
+
     public static bool AssertListAreEqualed(List<int> source, List<int> target)
     {
       bool result = true;

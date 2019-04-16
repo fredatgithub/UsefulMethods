@@ -145,10 +145,17 @@ namespace UsefulMethods
       return result;
     }
 
-    public static List<int> GetTwinPrimeBefore2(int number)
+    public static List<int> GetTwinPrimeWith6NBefore(int number)
     {
       List<int> result = new List<int>();
       if (number < 2)
+      {
+        return result;
+      }
+
+      result.Add(2);
+
+      if (number <= 3)
       {
         return result;
       }
@@ -157,13 +164,50 @@ namespace UsefulMethods
        Tout couple de nombres premiers jumeaux, à l'exception du couple (3, 5), est de la forme (6n – 1, 6n + 1) pour un certain entier n. En effet, tout triplet d'entiers consécutifs comporte au moins un multiple de 2 (éventuellement deux) et un seul multiple de 3 ; l'entier qui se trouve entre les deux nombres premiers jumeaux est à la fois ce multiple de 2 et ce multiple de 3, car cela ne peut pas être l'un des nombres premiers.
        * */
 
-      for (int i = 7; i <= number; i++)
+      int n = 1;
+
+      while (6 * n - 1 <= number)
       {
-        if (IsTwinPrime(i))
+        if (IsTwinPrime(6 * n - 1))
         {
-          result.Add(i);
-          result.Add(i + 2);
+          result.Add(6 * n - 1);
         }
+
+        n++;
+      }
+
+      return result;
+    }
+
+    public static List<int> GetTwinPrimeWithMPlus2Before(int number)
+    {
+      List<int> result = new List<int>();
+      if (number < 2)
+      {
+        return result;
+      }
+
+      result.Add(2);
+
+      if (number <= 3)
+      {
+        return result;
+      }
+
+      /*
+       Pour tout entier m ≥ 2, le couple (m, m + 2) est constitué de nombres premiers jumeaux si et seulement si 4[(m - 1)! + 1] + m est divisible par m(m + 2). Cette caractérisation des nombres premiers jumeaux, remarquée par P. A. Clement en 1949, résulte du théorème de Wilson.
+       * */
+
+      int m = 1;
+
+      while (6 * m - 1 <= number)
+      {
+        if (IsTwinPrime(6 * m - 1))
+        {
+          result.Add(6 * m - 1);
+        }
+
+        m++;
       }
 
       return result;
