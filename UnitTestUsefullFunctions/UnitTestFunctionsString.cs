@@ -10919,5 +10919,53 @@ namespace UnitTestUsefulMethods
       int result = StringFunc.GetPositionOfString(source, source2);
       Assert.AreEqual(result, expected);
     }
+
+    [TestMethod]
+    public void TestMethod_InsertSpaces_none()
+    {
+      string source =  "a long long time ago in a galaxy far far away" ;
+      string expected = "a long long time ago in a galaxy far far away";
+      string result = StringFunc.InsertSpaces(source);
+      Assert.AreEqual(result, expected);
+    }
+
+    [TestMethod]
+    public void TestMethod_InsertSpaces_1()
+    {
+      string source =   "ALong long time ago in a galaxy far far away";
+      string expected = "A Long long time ago in a galaxy far far away";
+      string result = StringFunc.InsertSpaces(source);
+      Assert.AreEqual(result, expected);
+    }
+
+    [TestMethod]
+    public void TestMethod_InsertSpaces_10()
+    {
+      string source = "ALongLongTimeAgoInAGalaxyFarFarAway";
+      string expected = "A Long Long Time Ago In A Galaxy Far Far Away";
+      string result = StringFunc.InsertSpaces(source);
+      Assert.AreEqual(result, expected);
+    }
+
+    [TestMethod]
+    public void TestMethod_InsertSpaces_10_toLower()
+    {
+      string source = "ALongLongTimeAgoInAGalaxyFarFarAway";
+      const bool toLower = true;
+      string expected = "A long long time ago in a galaxy far far away";
+      string result = StringFunc.InsertSpaces(source, toLower);
+      Assert.AreEqual(result, expected);
+    }
+
+    [TestMethod]
+    public void TestMethod_InsertSpaces_10_toLower_keepFirstLetterInUpperCase_equal_false()
+    {
+      string source = "ALongLongTimeAgoInAGalaxyFarFarAway";
+      const bool toLower = true;
+      const bool keepFirstLetterInUpperCase = false;
+      string expected = "a long long time ago in a galaxy far far away";
+      string result = StringFunc.InsertSpaces(source, toLower, keepFirstLetterInUpperCase);
+      Assert.AreEqual(result, expected);
+    }
   }
 }

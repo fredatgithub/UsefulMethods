@@ -3515,5 +3515,45 @@ namespace UsefulMethods
 
       return result;
     }
+
+    public static string InsertSpaces(string source, bool toLowerCase = false, bool keepFirstLetterInUpperCase = true)
+    {
+      string result = string.Empty;
+      if (!String.IsNullOrEmpty(source))
+      {
+        int letterCursor = 0;
+        foreach (char letter in source)
+        {
+
+          if (Char.IsUpper(letter))
+          {
+            if (letterCursor != 0)
+            {
+              result += " ";
+            }
+          }
+          
+          if (toLowerCase)
+          {
+            if (letterCursor == 0 && keepFirstLetterInUpperCase)
+            {
+              result += letter;
+            }
+            else
+            {
+              result += letter.ToString().ToLower();
+            }
+          }
+          else
+          {
+            result += letter;
+          }
+          
+          letterCursor++;
+        }
+      }
+
+      return result.TrimStart();
+    }
   }
 }
