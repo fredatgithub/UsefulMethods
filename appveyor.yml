@@ -12,7 +12,7 @@
 #platform: Any CPU
 image:
   #Visual studio 2017
-  Preview Visual studio 2019
+   Visual studio 2019 Preview
 # to add several platforms to build matrix:
 platform:
 #  - x86
