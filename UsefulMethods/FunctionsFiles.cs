@@ -504,7 +504,7 @@ namespace UsefulMethods
     {
       if (string.IsNullOrEmpty(xml))
       {
-        return default;
+        return default(T);
       }
 
       XmlSerializer serializer = new XmlSerializer(typeof(T));
